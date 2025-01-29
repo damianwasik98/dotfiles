@@ -28,7 +28,7 @@ export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 
 export PYTHONBREAKPOINT=ipdb.set_trace
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source "$HOME/.config/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 #pyenv
 export PYENV_ROOT="$HOME/.pyenv"
