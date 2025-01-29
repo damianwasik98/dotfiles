@@ -1,4 +1,3 @@
---target ~ zsh
---target ~/.config --ignore zsh
 --ignore=.stowrc
 --ignore=DS_Store
+-v
