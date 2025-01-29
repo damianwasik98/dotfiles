@@ -12,7 +12,7 @@ alias gp='git pull'
 alias gs='git status'
 alias lg='lazygit'
 
-source "$HOME/.slimzsh/slim.zsh"
+source "$HOME/.config/slimzsh/slim.zsh"
 
 alias proxy="networksetup -setsocksfirewallproxystate Wi-Fi"
 
