@@ -52,7 +52,7 @@ final_cut_trial_again () {
 GPG_TTY=$(tty)
 export GPG_TTY
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.config/fzf/.fzf.zsh
 
 #eval $(thefuck --alias)
 
