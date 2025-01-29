@@ -40,15 +40,6 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 export EDITOR="vim"
 
-final_cut_trial_again () {
-  rm -f "~/Library/Application Support/.ffuserdata"
-  if [[ "$?" == 0 ]]; then
-    echo "Final Cut's trial period has been extended for the next 90 days"
-  elseeval "$(pyenv init -)"
-    echo "There was a problem with extending Final Cut's trial period"
-  fi
-}
-
 GPG_TTY=$(tty)
 export GPG_TTY
 
