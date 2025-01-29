@@ -1,0 +1,3 @@
+stow --target ~ -D zsh
+stow --target ~/.config -D .
+
