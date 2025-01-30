@@ -25,6 +25,7 @@ export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
 
 export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
+export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 
 export PYTHONBREAKPOINT=ipdb.set_trace
 
