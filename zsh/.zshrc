@@ -13,6 +13,11 @@ alias gp='git pull'
 alias gs='git status'
 alias lg='lazygit'
 
+# locale
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US
+export LC_ALL=en_US.UTF-8
+
 source "$HOME/.config/slimzsh/slim.zsh"
 
 alias proxy="networksetup -setsocksfirewallproxystate Wi-Fi"
