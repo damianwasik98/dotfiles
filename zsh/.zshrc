@@ -2,6 +2,7 @@ setopt no_nomatch
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 alias sb="~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Damian"
+alias tmux="tmux -f ~/.config/tmux/tmux.conf"
 
 # ls
 alias ls='ls --color=auto'
