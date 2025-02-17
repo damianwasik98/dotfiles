@@ -45,7 +45,7 @@ eval "$(pyenv virtualenv-init -)"
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
-export EDITOR="vim"
+export EDITOR="nvim"
 
 GPG_TTY=$(tty)
 export GPG_TTY
