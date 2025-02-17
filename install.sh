@@ -5,6 +5,11 @@ command_exists() {
 }
 
 install_homebrew() {
+	if command_exists brew; then
+		echo "Homebrew is already installed"
+		return
+	fi
+
 	if [[ "$OSTYPE" == "darwin"* ]]; then
 		# macOS
 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -19,8 +24,34 @@ install_homebrew() {
 	fi
 }
 
+prepare_apt() {
+	if [ "$(id -u)" -eq 0 ]; then
+		apt update && apt install -y sudo
+	else
+		sudo apt update
+	fi
+}
+
+set_timezone() {
+	echo "Europe/Warsaw" | sudo tee /etc/timezone
+}
+
+prepare_installation() {
+	if [[ "$OSTYPE" == "linux-gnu" && $(uname -m) == "aarch64" ]]; then
+		prepare_apt
+		set_timezone
+	else
+		install_homebrew
+		brew update
+	fi
+}
+
 install_packages() {
-	brew upgrade "$@"
+	if [[ "$OSTYPE" == "linux-gnu" && $(uname -m) == "aarch64" ]]; then
+		sudo apt install -y "$@"
+	else
+		brew upgrade "$@"
+	fi
 }
 
 MINIMAL_TOOLS=(
@@ -28,10 +59,10 @@ MINIMAL_TOOLS=(
 	"tmux"
 	"neovim"
 	"git"
-	"lazygit"
-	"docker"
-	"lazydocker"
-	"yazi"
+	#"lazygit"
+	#"docker"
+	#"lazydocker"
+	#"yazi"
 	"fzf"
 	"tree"
 	"htop"
@@ -41,10 +72,10 @@ MINIMAL_TOOLS=(
 )
 
 EXTRAS=(
-	"kubectl"
-	"k9s"
-	"devpod"
-	"1password-cli"
+	#"kubectl"
+	#"k9s"
+	#"devpod"
+	#"1password-cli"
 	"jsonnet"
 )
 
@@ -57,20 +88,13 @@ MACOS_ONLY_TOOLS=(
 	"gnu-tar"
 )
 
-if ! command_exists brew; then
-	echo "Installing Homebrew..."
-	install_homebrew
-else
-	echo "Homebrew is already installed"
-fi
+echo "Preparing installation..."
+prepare_installation
 
-echo "Updating Homebrew..."
-brew update
-
-INSTALL_EXTRAS=${SKIP_EXTRAS:-0}
 echo "Installing packages..."
 install_packages "${MINIMAL_TOOLS[@]}"
 
+INSTALL_EXTRAS=${SKIP_EXTRAS:-0}
 if [ "$INSTALL_EXTRAS" -eq 0 ]; then
 	install_packages "${EXTRAS[@]}"
 fi
