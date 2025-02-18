@@ -13,65 +13,52 @@ alias gp='git pull'
 alias gs='git status'
 alias lg='lazygit'
 
+# mac os
+alias proxy="networksetup -setsocksfirewallproxystate Wi-Fi"
+
 # locale
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US
 export LC_ALL=en_US.UTF-8
 
-source "$HOME/.config/slimzsh/slim.zsh"
+export EDITOR="nvim"
 
-alias proxy="networksetup -setsocksfirewallproxystate Wi-Fi"
+source "$HOME/.config/slimzsh/slim.zsh"
 
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 
-export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
-export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
+#export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
+#export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
 
+# path
 export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
+export PATH=$PATH:~/.local/bin
 
-export PYTHONBREAKPOINT=ipdb.set_trace
+#export PYTHONBREAKPOINT=ipdb.set_trace
 
 source "$HOME/.config/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 #pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#export PYENV_ROOT="$HOME/.pyenv"
+#[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+#export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
-export EDITOR="nvim"
-
-GPG_TTY=$(tty)
-export GPG_TTY
+#GPG_TTY=$(tty)
+#export GPG_TTY
 
 source ~/.config/fzf/.fzf.zsh
 
-#eval $(thefuck --alias)
-
-export PATH=$PATH:~/.local/bin
 
 fpath+=~/.zfunc
 autoload -Uz compinit && compinit
 
 #direnv
-eval "$(direnv hook zsh)"
+#eval "$(direnv hook zsh)"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/damian/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/damian/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/damian/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/damian/google-cloud-sdk/completion.zsh.inc'; fi
-
-# pnpm
-export PNPM_HOME="/Users/damian/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
