@@ -1,106 +1,60 @@
 #!/bin/bash
 
 command_exists() {
-	command -v "$1" >/dev/null 2>&1
+  command -v "$1" >/dev/null 2>&1
 }
 
-install_homebrew() {
-	if command_exists brew; then
-		echo "Homebrew is already installed"
-		return
-	fi
-
-	if [[ "$OSTYPE" == "darwin"* ]]; then
-		# macOS
-		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-		echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>~/.zprofile
-		eval "$(/opt/homebrew/bin/brew shellenv)"
-	else
-		# Linux
-		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-		test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
-		test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-		echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >>~/.bashrc
-	fi
+install_nix_multiuser() {
+  sh <(sudo curl -L https://nixos.org/nix/install) --yes
+  # export path globally for all users
+  . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 }
 
-prepare_apt() {
-	if [ "$(id -u)" -eq 0 ]; then
-		apt update && apt install -y sudo
-	else
-		sudo apt update
-	fi
+install_nix_singleuser() {
+  sh <(sudo curl -L https://nixos.org/nix/install) --yes
+  export PATH=$HOME/.nix-profile/bin:$PATH
+  export NIX_PATH=/nix/var/nix/profiles/per-user/$USER/channels
 }
 
-set_timezone() {
-	echo "Europe/Warsaw" | sudo tee /etc/timezone
+install_nix() {
+  if [[ "$OSTYPE" == "darwin" ]]; then
+    install_nix_multiuser
+  else
+    install_nix_singleuser
+  fi
 }
 
-prepare_installation() {
-	if [[ "$OSTYPE" == "linux-gnu" && $(uname -m) == "aarch64" ]]; then
-		prepare_apt
-		set_timezone
-	else
-		install_homebrew
-		brew update
-	fi
+prepare_ubuntu_for_installation() {
+  sudo apt update && sudo apt install curl xz-utils -y
 }
 
-install_packages() {
-	if [[ "$OSTYPE" == "linux-gnu" && $(uname -m) == "aarch64" ]]; then
-		sudo apt install -y "$@"
-	else
-		brew upgrade "$@"
-	fi
-}
-
-MINIMAL_TOOLS=(
-	"stow"
-	"tmux"
-	"neovim"
-	"git"
-	#"lazygit"
-	#"docker"
-	#"lazydocker"
-	#"yazi"
-	"fzf"
-	"tree"
-	"htop"
-	"wget"
-	"jq"
-	"yq"
-)
-
-EXTRAS=(
-	#"kubectl"
-	#"k9s"
-	#"devpod"
-	#"1password-cli"
-	"jsonnet"
-)
-
-MACOS_ONLY_TOOLS=(
-	"wezterm"
-	"aerospace"
-	"colima"
-	"gnu-getopt"
-	"gnu-sed"
-	"gnu-tar"
-)
-
-echo "Preparing installation..."
-prepare_installation
-
-echo "Installing packages..."
-install_packages "${MINIMAL_TOOLS[@]}"
-
-INSTALL_EXTRAS=${SKIP_EXTRAS:-0}
-if [ "$INSTALL_EXTRAS" -eq 0 ]; then
-	install_packages "${EXTRAS[@]}"
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  prepare_ubuntu_for_installation
 fi
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
-	install_packages "${MACOS_ONLY_TOOLS[@]}"
+if ! command_exists nix; then
+  install_nix
 fi
 
-echo "Done"
+if ! command_exists stow; then
+  nix-env -iA nixpkgs.stow
+fi
+
+if [ -f ~/.zshrc ]; then
+  cp ~/.zshrc ~/.zshrc.backup
+  rm ~/.zshrc
+fi
+
+./setup
+
+nix-env -iA nixpkgs.minimalTools
+
+if [[ "$OSTYPE" == "darwin*" ]]; then
+  nix-env -iA nixpkgs.macOSOnly
+fi
+
+if ! command_exists zsh; then
+  nix-env -iA zsh
+fi
+
+exec zsh -l
