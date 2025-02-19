@@ -57,4 +57,5 @@ if ! command_exists zsh; then
   nix-env -iA zsh
 fi
 
-exec zsh -l
+git submodule init
+git submodule update
