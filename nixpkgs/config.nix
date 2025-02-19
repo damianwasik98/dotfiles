@@ -10,7 +10,7 @@
 				yazi
 				fzf
 				tree
-        htop
+        btop
 				wget
 				jq
 				yq
