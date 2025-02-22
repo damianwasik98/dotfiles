@@ -1,5 +1,7 @@
 setopt no_nomatch
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 alias sb="~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Damian"
 alias tmux="tmux -f ~/.config/tmux/tmux.conf"
