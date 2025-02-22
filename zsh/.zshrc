@@ -3,8 +3,11 @@ setopt no_nomatch
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
+alias hl="~/Repos/homelab/"
 alias sb="~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Damian"
 alias tmux="tmux -f ~/.config/tmux/tmux.conf"
+alias vim="nvim"
+alias v="vim"
 
 # ls
 alias ls='ls --color=auto'
@@ -15,6 +18,9 @@ alias gp='git pull'
 alias gs='git status'
 alias lg='lazygit'
 
+# kubectl
+alias k='kubectl'
+alias kgp='kubectl get pods'
 # mac os
 alias proxy="networksetup -setsocksfirewallproxystate Wi-Fi"
 
