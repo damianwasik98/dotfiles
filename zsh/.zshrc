@@ -21,6 +21,8 @@ alias lg='lazygit'
 # kubectl
 alias k='kubectl'
 alias kgp='kubectl get pods'
+export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
+export SOPS_AGE_RECIPIENTS="age1x0v3g84kc5tphtwyqv6urcgnqqgp8u7l6cq85mlmu8ty9e7nudqsgxwrwj"
 # mac os
 alias proxy="networksetup -setsocksfirewallproxystate Wi-Fi"
 
