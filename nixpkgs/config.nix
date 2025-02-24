@@ -2,18 +2,18 @@
   packageOverrides = pkgs: {
     minimalTools = with pkgs; [ 
         git
-				tmux
+        tmux
         neovim
-				git
-				lazygit
-				lazydocker
-				yazi
-				fzf
-				tree
+        git
+        lazygit
+        lazydocker
+        yazi
+        fzf
+        tree
         btop
-				wget
-				jq
-				yq
+        wget
+        jq
+        yq
         ripgrep
         fd
       ];
