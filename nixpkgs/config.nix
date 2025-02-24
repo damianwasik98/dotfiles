@@ -16,6 +16,7 @@
         yq
         ripgrep
         fd
+        zoxide
       ];
     k8sTools = with pkgs; [
       kubectl
