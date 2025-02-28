@@ -17,6 +17,13 @@
         ripgrep
         fd
         zoxide
+        bat
+        lsd
+        duf
+        tldr
+        procs
+        httpie
+        doggo
       ];
     k8sTools = with pkgs; [
       kubectl
