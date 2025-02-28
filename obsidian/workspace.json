@@ -1,0 +1,240 @@
+{
+  "main": {
+    "id": "b2f16c4eb914f91c",
+    "type": "split",
+    "children": [
+      {
+        "id": "4000df55858985d0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7c2fac07a12ead5a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Projects/Moja strona internetowa/Moja strona internetowa.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Moja strona internetowa"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "75c49665c098e423",
+    "type": "split",
+    "children": [
+      {
+        "id": "ead52f31433e428c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6a3173bc83fce6b1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byModifiedTime",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "1be67386e867aa61",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#youtube",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "8ec43e414ac7edb3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 331.5
+  },
+  "right": {
+    "id": "ff07403a1b29d2fc",
+    "type": "split",
+    "children": [
+      {
+        "id": "6aa7ea51471f3f82",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0e035b320f6fe3c4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "1 Projects/Moja strona internetowa/Moja strona internetowa.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Moja strona internetowa"
+            }
+          },
+          {
+            "id": "50b3afdddaaf5ccd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "1 Projects/Moja strona internetowa/Moja strona internetowa.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Moja strona internetowa"
+            }
+          },
+          {
+            "id": "903891dd0ecd25fa",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "8cafb620a855794b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "1 Projects/Moja strona internetowa/Moja strona internetowa.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Moja strona internetowa"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "daily-notes:Open today's daily note": false,
+      "command-palette:Open command palette": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-importer:Open Importer": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "periodic-notes:Open today": false,
+      "obsidian-git:Open Git source control": false,
+      "github-sync:Sync with Remote": false
+    }
+  },
+  "active": "6a3173bc83fce6b1",
+  "lastOpenFiles": [
+    "1 Projects/Moja strona internetowa/Inspiracje stronek Portfolio.md",
+    "1 Projects/Moja strona internetowa/Moja strona internetowa.md",
+    "4 Archives/Cele i marzenia 31.12.2024.excalidraw.md",
+    "1 Projects/Wyjazd na Islandię/Kiedy mama może na Islandię.md",
+    "2 Areas/Homelab/RAID vs SnapRAID.md",
+    "0 Inbox/Untitled.md",
+    "2 Areas/Programowanie/Kurs Tmux.md",
+    "2 Areas/Homelab/5 Top Tailscale Alternatives Open Source and Paid.md",
+    "4 Archives/3-2-1 Backup.md",
+    "3 Resources/Sushi - znaczenie nazw.md",
+    "3 Resources/Sushi Sushi w dłoń.md",
+    "2 Areas/Homelab/The 'hidden' cost of using ZFS for your home NAS.md",
+    "2 Areas/Finanse/YNAB.md",
+    "4 Archives/Untitled 6.md",
+    "2 Areas/Finanse/Rozliczenie z Natalką.md",
+    "2 Areas/Zdrowie/Idealne proporcje sylwetki.md",
+    "2 Areas/Kryptowaluty/Cykliczność ma bardzo duży wpływ na cenę bitcoina niezależnie od tego co się wydarzyło na świecie.md",
+    "2 Areas/Kryptowaluty/Live z Philem 20.12.24.md",
+    "4 Archives/Model AI do sugerowania planu posiłków.md",
+    "2 Areas/Szukanie lepszej pracy w IT/How a Senior FAANG Software Engineer preps for interviews.md",
+    "2 Areas/Inwestycje/Kalkulator Inflacji.md",
+    "2 Areas/Programowanie/Podstawowe zasady działania Flux.md",
+    "2 Areas/Programowanie/Instalowanie helm chartu we Flux.md",
+    "2 Areas/Programowanie/Wyświetlanie yamla z configmapy w kubectl.md",
+    "2 Areas/Programowanie/Terminal Productivity.md",
+    "2 Areas/Programowanie/Git better than 95% people.md",
+    "krupt",
+    "2 Areas/Szukanie lepszej pracy w IT",
+    "2 Areas/Gotowanie",
+    "2 Areas/Inwestycje",
+    "2 Areas/Kryptowaluty",
+    "2 Areas/Kawa",
+    "2 Areas/Zdrowie",
+    "2 Areas/Untitled",
+    "2 Areas/Homelab",
+    "2 Areas/Znajomi i rodzina",
+    "3 Resources/Attachments/Zrzut ekranu 2025-02-25 o 19.35.46.png",
+    "3 Resources/Attachments/Zrzut ekranu 2025-02-25 o 19.33.38.png",
+    "3 Resources/Attachments/IMG_71F45D8AFFE7-1.jpeg",
+    "0 Inbox/Test.png",
+    "3 Resources/Attachments/Pasted image 20250212221437.png",
+    "3 Resources/Attachments/Pasted image 20250212221213.png",
+    "3 Resources/Attachments/Pasted image 20250212221158.png",
+    "3 Resources/Attachments/Pasted image 20250212221133.png",
+    "3 Resources/Attachments/Pasted image 20250212211150.png",
+    "3 Resources/Attachments/Zrzut ekranu 2025-02-12 o 20.59.20.png",
+    "Untitled.canvas",
+    "Untitled 1.canvas",
+    "Untitled 2.canvas",
+    "Test.canvas"
+  ]
+}

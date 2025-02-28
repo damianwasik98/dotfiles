@@ -1,0 +1,13 @@
+{
+  "cssTheme": "Border",
+  "textFontFamily": "Avenir",
+  "interfaceFontFamily": "Avenir",
+  "monospaceFontFamily": "JetBrains Mono",
+  "nativeMenus": true,
+  "translucency": false,
+  "enabledCssSnippets": [
+    "custom"
+  ],
+  "theme": "moonstone",
+  "showRibbon": true
+}
