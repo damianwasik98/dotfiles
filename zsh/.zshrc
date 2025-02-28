@@ -10,9 +10,10 @@ alias vim="nvim"
 alias v="vim"
 
 # ls
-alias ls='ls --color=auto'
+alias ls='lsd'
 alias la='ls -lathr'
 
+alias cat='bat'
 # git
 alias gp='git pull'
 alias gs='git status'
