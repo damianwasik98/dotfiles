@@ -9,6 +9,7 @@ alias tmux="tmux -f ~/.config/tmux/tmux.conf"
 alias vim="nvim"
 alias v="vim"
 
+alias t="tmux"
 # ls
 alias ls='lsd'
 alias la='ls -lathr'
