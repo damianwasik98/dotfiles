@@ -27,6 +27,7 @@
       ];
     k8sTools = with pkgs; [
       kubectl
+      kubectx
       k9s
     ];
     macOSOnly = with pkgs; [
