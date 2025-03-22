@@ -20,6 +20,10 @@ alias gp='git pull'
 alias gs='git status'
 alias lg='lazygit'
 
+# kubectx
+alias kc='kubectx'
+alias kns='kubens'
+
 # kubectl
 alias k='kubectl'
 alias kgp='kubectl get pods'
