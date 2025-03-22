@@ -25,6 +25,8 @@ return {
 			mods = "CTRL",
 			action = wezterm.action.ClearScrollback("ScrollbackAndViewport"),
 		},
+		{ key = "LeftArrow", mods = "ALT", action = wezterm.action.SendKey({ key = "b", mods = "ALT" }) },
+		{ key = "RightArrow", mods = "ALT", action = wezterm.action.SendKey({ key = "f", mods = "ALT" }) },
 	},
 	mouse_bindings = {
 		-- Ctrl-click will open the link under the mouse cursor
