@@ -53,6 +53,7 @@ fpath+=~/.zfunc
 export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 export PATH=$PATH:~/.local/bin
+export PATH="$HOME/.nix-profile/bin:$PATH"
 
 #export PYTHONBREAKPOINT=ipdb.set_trace
 
