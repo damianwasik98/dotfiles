@@ -1,2 +1,3 @@
 stow -t ~ zsh
-stow --ignore '^zsh$' --ignore '^(setup|cleanup|install)' -t ~/.config .
+stow -t ~/.claude claude
+stow --ignore '^zsh$' --ignore '^(setup|cleanup|install)' --ignore '^claude$' -t ~/.config .
