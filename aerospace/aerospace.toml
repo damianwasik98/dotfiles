@@ -164,3 +164,7 @@ h = ['join-with left', 'mode main']
 j = ['join-with down', 'mode main']
 k = ['join-with up', 'mode main']
 l = ['join-with right', 'mode main']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'FaceTime'
+run = 'layout floating'
