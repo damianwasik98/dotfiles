@@ -3,12 +3,13 @@ setopt no_nomatch
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+alias projects="/Users/damian/Library/CloudStorage/GoogleDrive-damianwasik98@gmail.com/Mój\ dysk/Projects"
 alias hl="~/Repos/homelab/"
 alias sb="~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Damian"
 alias tmux="tmux -f ~/.config/tmux/tmux.conf"
 alias vim="nvim"
 alias v="vim"
-
 alias t="tmux"
 # ls
 alias ls='lsd'
@@ -27,6 +28,7 @@ alias kns='kubens'
 # kubectl
 alias k='kubectl'
 alias kgp='kubectl get pods'
+#source <(kubectl completion zsh)
 export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
 export SOPS_AGE_RECIPIENTS="age1x0v3g84kc5tphtwyqv6urcgnqqgp8u7l6cq85mlmu8ty9e7nudqsgxwrwj"
 # mac os
@@ -41,6 +43,10 @@ export EDITOR="nvim"
 
 source "$HOME/.config/slimzsh/slim.zsh"
 
+#docker
+if [[ "$OSTYPE" == "darwin*" ]]; then
+  export DOCKER_HOST="unix:///$HOME/.config/colima/docker/docker.sock"
+fi
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select
@@ -54,16 +60,16 @@ export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 export PATH=$PATH:~/.local/bin
 export PATH="$HOME/.nix-profile/bin:$PATH"
-
+export PATH="/nix/var/nix/profiles/default/bin:$PATH"
 #export PYTHONBREAKPOINT=ipdb.set_trace
 
 source "$HOME/.config/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 #pyenv
-#export PYENV_ROOT="$HOME/.pyenv"
-#[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-#eval "$(pyenv init -)"
-#eval "$(pyenv virtualenv-init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 #export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
@@ -79,3 +85,7 @@ autoload -Uz compinit && compinit
 #direnv
 #eval "$(direnv hook zsh)"
 
+# zoxide
+eval "$(zoxide init zsh)"
+export PATH="/opt/homebrew/opt/ruby@3.2/bin:$PATH"
+. "/Users/damian/.deno/env"
