@@ -24,6 +24,7 @@
         procs
         httpie
         doggo
+        cloudflared
       ];
     k8sTools = with pkgs; [
       kubectl
