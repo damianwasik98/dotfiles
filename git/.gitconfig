@@ -1,0 +1,14 @@
+[core]
+	editor = vim
+	pager = delta
+[user]
+	email = damianwasik98@gmail.com
+	name = Damian Wąsik
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
+[delta]
+	side-by-side = true
+[interactive]
+	diffFilter = delta --color-only
