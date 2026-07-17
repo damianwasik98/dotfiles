@@ -5,6 +5,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias projects="/Users/damian/Library/CloudStorage/GoogleDrive-damianwasik98@gmail.com/Mój\ dysk/Projects"
+alias resources="/Users/damian/Library/CloudStorage/GoogleDrive-damianwasik98@gmail.com/Mój\ dysk/Resources"
 alias hl="~/Repos/homelab/"
 alias sb="~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Damian"
 alias tmux="tmux -f ~/.config/tmux/tmux.conf"
