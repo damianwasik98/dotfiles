@@ -24,6 +24,10 @@
       }
     ]
   },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  },
   "extraKnownMarketplaces": {
     "impeccable": {
       "source": {
@@ -33,14 +37,16 @@
     }
   },
   "alwaysThinkingEnabled": true,
+  "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
   "editorMode": "vim",
+  "autoCompactEnabled": true,
+  "remoteControlAtStartup": false,
+  "agentPushNotifEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754089904910
   },
-  "tui": "fullscreen",
-  "statusLine": {
-    "type": "command",
-    "command": "bash ~/.claude/statusline-command.sh"
+  "enabledPlugins": {
+    "skill-creator@claude-plugins-official": true
   }
 }
