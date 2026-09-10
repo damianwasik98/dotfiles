@@ -1,0 +1,73 @@
+{
+  "bundleId": "io.gechr.WhichSpace",
+  "settings": {
+    "classicSpaceSwitching": false,
+    "clickToSwitchSpaces": true,
+    "displayOrder": "system",
+    "emojiPickerSkinTone": 0,
+    "fullscreenIconStyle": "appIcon",
+    "hideEmptySpaces": false,
+    "hideFullscreenApps": false,
+    "hideSingleSpace": false,
+    "horizontalScrollEnabled": false,
+    "hotkeysMoveSkipEmptySpaces": false,
+    "hotkeysSendSkipEmptySpaces": false,
+    "hotkeysSkipEmptySpaces": false,
+    "inactiveSpaceOpacity": 30,
+    "includeNightlyUpdates": false,
+    "invertHorizontalScroll": false,
+    "invertVerticalScroll": false,
+    "launchAtLogin": true,
+    "localSpaceNumbers": false,
+    "moveToApplicationsFolderAlertSuppress": false,
+    "paddingScale": 0,
+    "preserveSystemSpaceNumbers": false,
+    "scrollHapticFeedback": false,
+    "scrollHapticIntensity": 4,
+    "scrollSensitivity": 100,
+    "scrollWrapAround": false,
+    "separatorStyle": "line",
+    "showAllDisplays": false,
+    "showAllSpaces": false,
+    "shrinkIconToFit": true,
+    "sizeScale": 100,
+    "soundName": "",
+    "spacePickerMaxAppIcons": 5,
+    "spacePickerStyle": "icons",
+    "verticalScrollEnabled": false
+  },
+  "spacePreferences": {
+    "colors": {
+      "0": {
+        "background": {
+          "alpha": 1,
+          "blue": 1,
+          "green": 1,
+          "red": 1
+        },
+        "foreground": {
+          "alpha": 1,
+          "blue": 1,
+          "green": 1,
+          "red": 1
+        }
+      }
+    },
+    "fonts": {
+      "0": {
+        "name": "AppleGothic",
+        "size": 14
+      }
+    },
+    "iconStyles": {
+      "0": "transparent"
+    },
+    "labels": {
+      "0": ""
+    },
+    "symbols": {
+      "0": ""
+    }
+  },
+  "version": "1.3.8"
+}
