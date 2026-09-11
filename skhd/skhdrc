@@ -10,11 +10,11 @@ alt - 6 : yabai -m space --focus 6
 alt - 7 : yabai -m space --focus 7
 alt - 8 : yabai -m space --focus 8
 alt - 9 : yabai -m space --focus 9
-# focus window in current space
-ctrl - h : yabai -m window --focus west
-ctrl - j : yabai -m window --focus south
-ctrl - k : yabai -m window --focus north
-ctrl - l : yabai -m window --focus east
+# focus window in current space (works for floating windows too)
+ctrl - h : ~/.config/skhd/focus_direction.sh west
+ctrl - j : ~/.config/skhd/focus_direction.sh south
+ctrl - k : ~/.config/skhd/focus_direction.sh north
+ctrl - l : ~/.config/skhd/focus_direction.sh east
 
 # -- Moving Windows Around --
 
